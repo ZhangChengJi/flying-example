@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: ${ACTIVE:dev}   # 配置启动环境，如果系统环境变量$ACTIVE配置了环境名称那么默认使用$ACTIVE的
+  flying:
+    bootstrap:
+      app-id: flying-example  #当前自己项目名称
+      enabled: true          # 是否开启flying配置中心 默认为false
+      refresh-enabled: true  # 是否开启实时配置更新   默认为false
+      namespace: default     # 在服务端配置的当前项目配置信息的命名空间名称，可以有多个，多个逗号分隔
+      address:               # 配置多个环境，启动时会根据spring.profiles.active环境名称进行选择环境加载配置
+        - name: dev          # 环境名称
+          url: 192.168.124:8881 #环境地址(服务端地址)
+server:
+  port: 9999

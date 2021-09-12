@@ -14,7 +14,7 @@ flying-client sample springboot
 3. 在dev环境下的default namespace(命名空间) 添加如下配置，然后进行配置发布：
 
    ```yml
-   abc: a1、b、c、d、e、f、g、h、i、j、k、l、m、n、o、p、q、r、s、t、u、v、w、x、y、z
+   abc: a、b、c、d、e、f、g、h、i、j、k、l、m、n、o、p、q、r、s、t、u、v、w、x、y、z
    user:
      name: Bruce Lee
      age: 32

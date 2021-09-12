@@ -1,8 +1,10 @@
 package com.flying.client.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
+@RefreshScope
 @Component
 @ConfigurationProperties(prefix = "user")
 public class UserProperties {
@@ -40,7 +42,7 @@ public class UserProperties {
     }
 
     public void setContact(String contact) {
-        contact = contact;
+        this.contact = contact;
     }
 
     @Override

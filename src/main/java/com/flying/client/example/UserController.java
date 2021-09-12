@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-@RefreshScope
+@RefreshScope //配置文件热加载
 @RestController
 public class UserController {
 
@@ -21,6 +21,7 @@ public class UserController {
         System.out.println("打印user信息:"+this.user);
         return this.user;
     }
+    @GetMapping("/abc")
     public String getAbc(){
         System.out.println("打印26字母"+ this.abc);
         return this.abc;

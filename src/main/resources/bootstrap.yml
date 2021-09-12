@@ -9,6 +9,8 @@ spring:
       namespace: default     # 在服务端配置的当前项目配置信息的命名空间名称，可以有多个，多个逗号分隔
       address:               # 配置多个环境，启动时会根据spring.profiles.active环境名称进行选择环境加载配置
         - name: dev          # 环境名称
-          url: 192.168.124:8881 #环境地址(服务端地址)
+          url: 192.168.0.101:8881 #环境地址(服务端地址)
+        - name: fat          # 环境名称
+          url: flying-config.flying.svc:8881 #环境地址(服务端地址) k8s 环境写法
 server:
   port: 9999
